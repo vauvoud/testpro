@@ -1,5 +1,7 @@
-# syntax=docker/dockerfile:1
+
 FROM ubuntu
-COPY env.sh
-RUN make /app
-CMD python /app/app.py
+WORKDIR /
+
+COPY env.sh .
+
+CMD ["python" , "env.py"]
